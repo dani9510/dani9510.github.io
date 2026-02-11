@@ -1,0 +1,119 @@
+:root {
+    --neon-blue: #00f2ff;
+    --neon-purple: #7000ff;
+    --bg-black: #050505;
+    --glass: rgba(255, 255, 255, 0.05);
+}
+
+body {
+    background: var(--bg-black);
+    color: #fff;
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+h1, h2, h3, .logo {
+    font-family: 'Orbitron', sans-serif;
+    letter-spacing: 2px;
+}
+
+/* Glassmorphism Effect */
+.glass {
+    background: var(--glass);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+}
+
+/* Hero Section */
+#hero-neon {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: radial-gradient(circle at center, #111122 0%, #050505 100%);
+}
+
+#hero-neon h1 {
+    font-size: 5rem;
+    background: linear-gradient(90deg, #fff, var(--neon-blue));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0 0 10px rgba(0, 242, 255, 0.5));
+}
+
+.pre-title { color: var(--neon-blue); font-weight: bold; letter-spacing: 5px; }
+
+/* Grid de Servicios */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 2rem 0;
+}
+
+.service-card {
+    padding: 2.5rem;
+    transition: 0.4s;
+    text-align: center;
+}
+
+.service-card:hover {
+    background: rgba(0, 242, 255, 0.05);
+    border-color: var(--neon-blue);
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 10px 30px rgba(0, 242, 255, 0.2);
+}
+
+/* Skill Matrix */
+.skills-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.skill-group {
+    background: rgba(255, 255, 255, 0.02);
+    padding: 1.5rem;
+    border-radius: 10px;
+    width: 300px;
+}
+
+.skill-group h4 { color: var(--neon-blue); margin-bottom: 1rem; }
+
+.skill-group span {
+    display: inline-block;
+    padding: 5px 12px;
+    margin: 4px;
+    border: 1px solid rgba(0, 242, 255, 0.3);
+    font-size: 0.8rem;
+    border-radius: 4px;
+}
+
+/* Navbar */
+.glass-nav {
+    position: fixed;
+    width: 90%;
+    left: 5%;
+    top: 20px;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(15px);
+    border-radius: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    z-index: 1000;
+}
+
+.cta-nav {
+    background: var(--neon-blue);
+    color: #000 !important;
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-weight: bold;
+}
