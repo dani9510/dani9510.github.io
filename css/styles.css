@@ -1,19 +1,22 @@
-/* =========================
-   VARIABLES GLOBALES
+/* ========================= 
+   PALETA MODERNA Y VARIABLES
 ========================= */
 :root {
-    --color-fondo: #0B0F1A;
-    --color-seccion-1: #0F1624;
-    --color-seccion-2: #111827;
 
-    --color-primario: #00E5FF;
-    --color-secundario: #7C4DFF;
+    /* Colores principales (paleta coherente moderna) */
+    --color-fondo: #0F172A;          /* Azul oscuro elegante */
+    --color-seccion-1: #111827;      /* Gris azulado */
+    --color-seccion-2: #1E293B;      /* Azul grisáceo */
 
-    --color-texto: #FFFFFF;
-    --color-texto-suave: #B0BEC5;
+    --color-principal: #3B82F6;      /* Azul moderno */
+    --color-acento: #8B5CF6;         /* Violeta elegante */
 
-    --glass-bg: rgba(255, 255, 255, 0.05);
+    --color-texto: #F1F5F9;          /* Blanco suave */
+    --color-texto-secundario: #94A3B8;
+
+    --glass-bg: rgba(255, 255, 255, 0.04);
 }
+
 
 /* =========================
    CONFIGURACIÓN GENERAL
@@ -24,52 +27,58 @@ body {
     font-family: 'Inter', sans-serif;
     margin: 0;
     overflow-x: hidden;
-    line-height: 1.7;   /* Mejora académica de legibilidad */
+    line-height: 1.8;  /* Mejor interlineado */
 }
 
 /* Espaciado uniforme */
 section {
-    padding: 5rem 10%;
+    padding: 6rem 10%;
 }
 
 /* =========================
-   ESCALA TIPOGRÁFICA RESPONSIVA
+   TIPOGRAFÍA MEJORADA
 ========================= */
 
-h1, h2, h3, .logo {
-    font-family: 'Orbitron', sans-serif;
-    letter-spacing: 2px;
+h1, h2, h3, h4, .logo {
+    font-family: 'Space Grotesk', sans-serif;
+    letter-spacing: 1px;
 }
 
+/* Jerarquía más clara */
 h1 {
-    font-size: clamp(2.8rem, 6vw, 4.5rem);
-    line-height: 1.1;
+    font-size: clamp(3rem, 6vw, 4.5rem);
+    line-height: 1.15;
+    font-weight: 700;
 }
 
 h2 {
-    font-size: clamp(1.8rem, 4vw, 2.5rem);
-    margin-bottom: 1.5rem;
+    font-size: clamp(2rem, 4vw, 2.8rem);
+    margin-bottom: 1.8rem;
+    font-weight: 600;
 }
 
 h3 {
-    font-size: clamp(1.2rem, 2.5vw, 1.5rem);
+    font-size: clamp(1.3rem, 2.5vw, 1.6rem);
     margin-bottom: 1rem;
+    font-weight: 600;
 }
 
 p {
-    font-size: 1rem;
-    color: var(--color-texto-suave);
+    font-size: 1.05rem;
+    color: var(--color-texto-secundario);
 }
+
 
 /* =========================
    EFECTO GLASS
 ========================= */
 .glass {
     background: var(--glass-bg);
-    backdrop-filter: blur(12px);
+    backdrop-filter: blur(14px);
     border: 1px solid rgba(255, 255, 255, 0.08);
-    border-radius: 15px;
+    border-radius: 18px;
 }
+
 
 /* =========================
    NAVBAR
@@ -83,10 +92,10 @@ p {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: rgba(0, 0, 0, 0.6);
-    backdrop-filter: blur(15px);
+    background: rgba(15, 23, 42, 0.7);
+    backdrop-filter: blur(18px);
     border-radius: 50px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.08);
     z-index: 1000;
 }
 
@@ -105,23 +114,23 @@ p {
 }
 
 .nav-links a:hover {
-    color: var(--color-primario);
+    color: var(--color-principal);
 }
 
 /* Botón CTA */
 .cta-nav {
-    background: var(--color-primario);
-    color: #000 !important;
+    background: var(--color-principal);
+    color: #fff !important;
     padding: 10px 22px;
-    border-radius: 25px;
+    border-radius: 30px;
     font-weight: 600;
     transition: 0.3s ease;
 }
 
 .cta-nav:hover {
-    background: var(--color-secundario);
-    color: #fff !important;
+    background: var(--color-acento);
 }
+
 
 /* =========================
    HERO SECTION
@@ -132,21 +141,21 @@ p {
     justify-content: center;
     align-items: center;
     text-align: center;
-    background: radial-gradient(circle at center, #111122 0%, var(--color-fondo) 100%);
+    background: radial-gradient(circle at center, #1E293B 0%, var(--color-fondo) 100%);
 }
 
 #hero-neon h1 {
-    background: linear-gradient(90deg, var(--color-texto), var(--color-primario));
+    background: linear-gradient(90deg, var(--color-principal), var(--color-acento));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    filter: drop-shadow(0 0 12px rgba(0, 229, 255, 0.4));
 }
 
 .pre-title {
-    color: var(--color-primario);
-    font-weight: bold;
-    letter-spacing: 5px;
+    color: var(--color-principal);
+    font-weight: 600;
+    letter-spacing: 4px;
 }
+
 
 /* =========================
    DIFERENCIACIÓN DE SECCIONES
@@ -159,45 +168,49 @@ p {
     background-color: var(--color-seccion-2);
 }
 
+
 /* =========================
    TÍTULOS DE SECCIÓN
 ========================= */
 .section-title {
     text-align: center;
-    color: var(--color-primario);
+    color: var(--color-principal);
     position: relative;
 }
 
 .section-title::after {
     content: "";
     display: block;
-    width: 60px;
-    height: 3px;
-    background: var(--color-secundario);
-    margin: 10px auto 0;
+    width: 70px;
+    height: 4px;
+    background: var(--color-acento);
+    margin: 12px auto 0;
+    border-radius: 4px;
 }
+
 
 /* =========================
    GRID DE SERVICIOS
 ========================= */
 .services-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2.5rem;
 }
 
 .service-card {
     padding: 2.5rem;
-    transition: 0.4s;
+    transition: 0.4s ease;
     text-align: center;
 }
 
 .service-card:hover {
-    background: rgba(0, 229, 255, 0.05);
-    border-color: var(--color-primario);
-    transform: translateY(-10px) scale(1.02);
-    box-shadow: 0 10px 30px rgba(0, 229, 255, 0.2);
+    background: rgba(59, 130, 246, 0.05);
+    border-color: var(--color-principal);
+    transform: translateY(-10px);
+    box-shadow: 0 12px 35px rgba(59, 130, 246, 0.2);
 }
+
 
 /* =========================
    SKILLS
@@ -210,34 +223,35 @@ p {
 }
 
 .skill-group {
-    background: rgba(255, 255, 255, 0.02);
-    padding: 1.5rem;
-    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.03);
+    padding: 1.8rem;
+    border-radius: 15px;
     width: 300px;
 }
 
 .skill-group h4 {
-    color: var(--color-primario);
+    color: var(--color-principal);
     margin-bottom: 1rem;
 }
 
 .skill-group span {
     display: inline-block;
-    padding: 5px 12px;
+    padding: 6px 14px;
     margin: 4px;
-    border: 1px solid rgba(0, 229, 255, 0.3);
-    font-size: 0.8rem;
-    border-radius: 4px;
+    border: 1px solid rgba(139, 92, 246, 0.4);
+    font-size: 0.85rem;
+    border-radius: 6px;
 }
+
 
 /* =========================
    FOOTER
 ========================= */
 .glass-footer {
     text-align: center;
-    padding: 2rem 1rem;
-    margin-top: 3rem;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 2.5rem 1rem;
+    margin-top: 4rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
     background-color: var(--color-seccion-1);
 }
 
@@ -249,5 +263,5 @@ p {
 }
 
 .social-links a:hover {
-    color: var(--color-primario);
+    color: var(--color-principal);
 }
